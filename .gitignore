@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+.env
+
+# Notas locales con datos de actividad de miembros
+NOTAS_WEB.md
