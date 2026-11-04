@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import { getMemberRoster } from '../data/members.mjs';
-const roster = await getMemberRoster();
+const roster = await getMemberRoster({ defaultRank: import.meta.env.MEMBER_DEFAULT_RANK });
 const members = roster.members;
 const rosterNote = roster.source === 'public'
   ? `Lista pública consultada al generar la web: ${new Intl.DateTimeFormat('es-ES', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/Madrid' }).format(roster.checkedAt)} (hora de Madrid).`

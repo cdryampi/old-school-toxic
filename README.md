@@ -27,7 +27,7 @@ El flujo de GitHub Actions publica en GitHub Pages. Para activar el enlace públ
 
 ## Miembros de la alianza
 
-Durante cada compilación, `src/data/members.mjs` consulta una vez la lista pública de OLD_SCHOOL en el servidor 64 y extrae solo nombres y rangos. Una respuesta inválida, otra alianza, un error o una conexión lenta activan el respaldo local de 11 miembros facilitados el 31/10/2026. Cuando el rango llega vacío, se muestra «No indicado». No usa credenciales, cookies, secretos ni información de actividad. La página indica cuándo se consultó o si se está usando el respaldo.
+Durante cada compilación, `src/data/members.mjs` consulta una vez la lista pública de OLD_SCHOOL en el servidor 64 y extrae solo nombres y rangos. Una respuesta inválida, otra alianza, un error o una conexión lenta activan el respaldo local de 11 miembros facilitados el 31/10/2026. Cuando el rango llega vacío, se muestra «Miembro» o el valor configurado en `MEMBER_DEFAULT_RANK`. Configura la variable en `.env` para desarrollo y en las variables del repositorio de GitHub para los despliegues; un valor vacío usa «Miembro». No usa credenciales, cookies, secretos ni información de actividad. La página indica cuándo se consultó o si se está usando el respaldo.
 
 GitHub Pages sirve HTML estático: la lista cambia al generar y desplegar de nuevo, no en tiempo real. El workflow incluye una ejecución diaria a las 05:17 UTC y admite ejecución manual; ese cambio entra en vigor solo al publicarse el workflow. La lista pública puede cambiar o dejar de estar disponible. Antes de activar la consulta periódica, conviene confirmar con soporte de Gladiatus que está permitida; las reglas prohíben determinados usos de software y automatización.
 

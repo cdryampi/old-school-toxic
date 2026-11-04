@@ -29,6 +29,7 @@ jobs:
         env:
           PUBLIC_SITE_URL: https://cdryampi.github.io/old-school-toxic/
           PUBLIC_WHATSAPP_URL: ${{ vars.PUBLIC_WHATSAPP_URL }}
+          MEMBER_DEFAULT_RANK: ${{ vars.MEMBER_DEFAULT_RANK }}
       - run: node scripts/prepare-pages.mjs
       - uses: actions/upload-pages-artifact@v3
         with:

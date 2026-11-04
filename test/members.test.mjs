@@ -7,8 +7,14 @@ const row = (name, rank) => `<tr><td><a href="?mod=player&amp;p=12">${name}</a><
 
 test('extrae solo nombres y rangos, y señala los rangos vacíos', () => {
   assert.deepEqual(parsePublicMembers(page(row('Lia', 'Maestro') + row('Saul:)', ''))), [
-    ['Lia', 'Maestro'], ['Saul:)', 'No indicado'],
+    ['Lia', 'Maestro'], ['Saul:)', 'Miembro'],
   ]);
+});
+
+test('permite configurar el rango vacío y trata valores vacíos como Miembro', () => {
+  const html = page(row('Lia', 'Maestro') + row('Saul:)', ''));
+  assert.deepEqual(parsePublicMembers(html, ' Recluta '), [['Lia', 'Maestro'], ['Saul:)', 'Recluta']]);
+  assert.equal(parsePublicMembers(html, '  ')[1][1], 'Miembro');
 });
 
 test('rechaza otras alianzas, resultados vacíos y filas duplicadas', () => {
