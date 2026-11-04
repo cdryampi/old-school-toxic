@@ -153,9 +153,6 @@ a:focus-visible{outline:3px solid #6e251c;outline-offset:4px}
 .veteran-copy{min-width:0}.veteran-copy h2{font-size:clamp(1.35rem,1rem + 1.8vw,2rem);line-height:1.2;margin:.4rem 0}
 .veteran-quote{color:#795247;font-style:italic;min-height:3em}
 .veteran-button{cursor:pointer}.veteran-button:not([hidden]){display:inline-flex}
-.motion-toggle:not([hidden]){display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.4rem .65rem;background:#fff1d7;color:#6d3128;border:2px solid #aa6651;border-radius:10px;font:700 .62rem 'Cinzel',Georgia,serif;cursor:pointer}
-.motion-toggle:focus-visible,.veteran-button:focus-visible{outline:3px solid #6e251c;outline-offset:4px}
-.motion-paused .sprite,.motion-paused .sprite::after{animation-play-state:paused!important}
-@media(max-width:1000px){.topbar{flex-wrap:wrap}.topbar nav{order:3;width:100%;justify-content:center}.motion-toggle{margin-left:auto}.top-link{margin-left:0}}
-@media(max-width:600px){.veteran-card{flex-direction:column;text-align:center}.veteran-card .character-gif{width:130px}.veteran-section{padding:2rem 1rem 3rem}.veteran-quote{min-height:0}.motion-toggle:not([hidden]){font-size:.55rem}.roster-character .character-gif{width:95px}}
-@media(prefers-reduced-motion:reduce){.motion-toggle:not([hidden]){display:none}}
+.veteran-button:focus-visible{outline:3px solid #6e251c;outline-offset:4px}
+@media(max-width:1000px){.topbar{flex-wrap:wrap}.topbar nav{order:3;width:100%;justify-content:center}.top-link{margin-left:0}}
+@media(max-width:600px){.veteran-card{flex-direction:column;text-align:center}.veteran-card .character-gif{width:130px}.veteran-section{padding:2rem 1rem 3rem}.veteran-quote{min-height:0}.roster-character .character-gif{width:95px}}
