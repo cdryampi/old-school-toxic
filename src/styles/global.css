@@ -139,3 +139,23 @@ a:focus-visible{outline:3px solid #6e251c;outline-offset:4px}
 @media(max-width:600px){.topbar{padding:12px 16px}.topbar nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:0 .5rem}.topbar nav a{justify-content:center;font-size:.65rem}.hero-inner{padding:2.5rem 1.25rem 6rem}.hero-copy{width:100%}.crest{width:min(190px,65vw);flex:none}.rules,.guide{grid-template-columns:minmax(0,1fr)}.section{padding-inline:1.25rem}.art-banner{margin-block:0 .5rem}.rule-list,.guide-steps{padding:1.25rem}.members-table th:last-child,.members-table td:last-child{width:clamp(4.5rem,25vw,6.25rem)}.members-table thead th,.members-table tbody th,.members-table tbody td{padding:.7rem .55rem}.members-table tbody i{margin-right:.35rem}.join{padding-inline:1rem}.button{min-height:44px}}
 @media(max-width:360px){.brand{font-size:.8rem;letter-spacing:0}.brand-crest{width:36px}.top-link{font-size:.6rem}.hero h1{font-size:clamp(1.45rem,7vw,1.8rem)}.hero-actions .button{width:100%}.roster-table{margin-top:110px}}
 .art-banner img{aspect-ratio:1223/1286}.art-chest img{aspect-ratio:1374/1145}
+
+/* Personajes en sus propios espacios y control de movimiento. */
+.character-gif{display:block;width:clamp(110px, 12vw, 155px);flex:none;line-height:0;margin-inline:auto}
+.character-gif img{display:block;max-width:100%;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;filter:drop-shadow(0 5px 4px #86503a33)}
+.welcome-character{display:flex;align-items:center;justify-content:center;gap:1rem;margin:1rem auto 0;max-width:26rem;padding:.5rem 1rem;background:#fff6e6;border:2px solid #e5b995;border-radius:22px}
+.welcome-character .character-gif{margin:0;width:clamp(90px,10vw,130px)}
+.welcome-character span{color:#844535;font:700 clamp(1rem,.8rem + .9vw,1.25rem) 'Alegreya',serif}
+.roster-character{margin:.5rem auto 0}.roster-character .character-gif{width:110px}
+.veteran-section{padding:3rem 1.25rem 4rem;background:#f7e6d3}
+.veteran-card{max-width:720px;margin:auto;display:flex;align-items:center;gap:clamp(1rem,4vw,2.5rem);padding:1.25rem clamp(1rem,4vw,2rem);border:3px solid #bc8064;outline:2px solid #f3d2aa;outline-offset:-9px;border-radius:22px;background:#fff2da;box-shadow:0 7px 0 #d7ad8b}
+.veteran-card .character-gif{width:clamp(120px,15vw,180px);margin:0}
+.veteran-copy{min-width:0}.veteran-copy h2{font-size:clamp(1.35rem,1rem + 1.8vw,2rem);line-height:1.2;margin:.4rem 0}
+.veteran-quote{color:#795247;font-style:italic;min-height:3em}
+.veteran-button{cursor:pointer}.veteran-button:not([hidden]){display:inline-flex}
+.motion-toggle:not([hidden]){display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.4rem .65rem;background:#fff1d7;color:#6d3128;border:2px solid #aa6651;border-radius:10px;font:700 .62rem 'Cinzel',Georgia,serif;cursor:pointer}
+.motion-toggle:focus-visible,.veteran-button:focus-visible{outline:3px solid #6e251c;outline-offset:4px}
+.motion-paused .sprite,.motion-paused .sprite::after{animation-play-state:paused!important}
+@media(max-width:1000px){.topbar{flex-wrap:wrap}.topbar nav{order:3;width:100%;justify-content:center}.motion-toggle{margin-left:auto}.top-link{margin-left:0}}
+@media(max-width:600px){.veteran-card{flex-direction:column;text-align:center}.veteran-card .character-gif{width:130px}.veteran-section{padding:2rem 1rem 3rem}.veteran-quote{min-height:0}.motion-toggle:not([hidden]){font-size:.55rem}.roster-character .character-gif{width:95px}}
+@media(prefers-reduced-motion:reduce){.motion-toggle:not([hidden]){display:none}}

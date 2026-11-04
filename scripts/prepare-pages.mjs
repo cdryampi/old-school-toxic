@@ -8,7 +8,7 @@ async function fixAssets(dir) {
     if (entry.isDirectory()) await fixAssets(file);
     else if (['.html', '.css'].includes(extname(file))) {
       const input = await readFile(file, 'utf8');
-      const output = input.replace(/((?:src|href)=["']|url\(["']?)\/images\//g, `$1${prefix}/images/`).replace(/((?:src|href)=["'])\/_astro\//g, `$1${prefix}/_astro/`);
+      const output = input.replace(/((?:src|srcset|href)=["']|url\(["']?)\/images\//g, `$1${prefix}/images/`).replace(/((?:src|srcset|href)=["'])\/_astro\//g, `$1${prefix}/_astro/`);
       if (input !== output) await writeFile(file, output);
     }
   }
